@@ -1,320 +1,338 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>prince sureshot </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JOIN NOW</title>
 
-
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
 <style>
 
-:root{
---panel:#071e1d;
---teal1:#0ef2d5;
---teal2:#13f2ff;
---btn-text:#001818;
---muted:rgba(255,255,255,0.75);
---label-red:#ff2f5a;
-}
-
-/* BODY */
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-margin:0;
-font-family:'Poppins',sans-serif;
-background:linear-gradient(180deg,#061214,#081617,#071013);
-color:#fff;
-overflow-x:hidden;
-}
-
-/* CENTER */
-
-.center-wrap{
+background:#111;
 display:flex;
 justify-content:center;
-padding:40px 0;
+align-items:center;
+min-height:100vh;
+padding:20px;
+font-family:'Roboto',sans-serif;
 }
 
 /* MAIN CARD */
 
-.wrap{
-max-width:400px;
-width:80%;
-background:var(--panel);
-border-radius:20px;
-padding:22px 20px 30px;
+.main-card{
+background:linear-gradient(160deg,#1a1a1a,#281b35,#1a1a1a);
+border-radius:25px;
+padding:40px 30px;
+max-width:600px;
+width:100%;
+box-shadow:0 0 40px rgba(120,0,200,0.3);
 text-align:center;
-position:relative;
-
-box-shadow:
-0 0 0 1px rgba(14,242,213,0.35),
-0 0 20px rgba(14,242,213,0.25),
-0 0 40px rgba(19,242,255,0.15),
-0 25px 45px rgba(0,0,0,0.7);
-
-animation: edgeGlow 3s ease-in-out infinite alternate;
-}
-
-@keyframes edgeGlow{
-from{
-box-shadow:
-0 0 0 1px rgba(14,242,213,0.25),
-0 0 16px rgba(14,242,213,0.18),
-0 0 32px rgba(19,242,255,0.1),
-0 25px 45px rgba(0,0,0,0.7);
-}
-to{
-box-shadow:
-0 0 0 1px rgba(14,242,213,0.45),
-0 0 28px rgba(14,242,213,0.35),
-0 0 55px rgba(19,242,255,0.22),
-0 25px 45px rgba(0,0,0,0.7);
-}
 }
 
 /* MARQUEE */
 
 .marquee{
-background:#000; /* BLACK BACKGROUND */
-color:#00ff6a; /* GREEN TEXT */
-font-weight:900;
+background:#222;
+color:#6bd1ff;
 padding:10px 0;
-border-radius:12px;
-margin-bottom:12px;
-font-size:15px;
-letter-spacing:1px;
-}
-
-/* PROFILE */
-
-.profile-box{
-width:180px;
-height:180px;
-margin:12px auto 18px;
-border-radius:18px;
+font-weight:600;
+font-size:1.2rem;
+border-radius:10px;
+margin-bottom:20px;
 overflow:hidden;
-border:4px solid rgba(14,242,213,0.25);
 }
 
-.profile-box img{
-width:100%;
-height:100%;
+.marquee span{
+display:inline-block;
+white-space:nowrap;
+animation:marquee 12s linear infinite;
+}
+
+@keyframes marquee{
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
+}
+
+/* PROFILE IMAGE SQUARE WITH OUTLINE */
+
+.profile-img{
+width:230px;
+height:230px;
+border-radius:12px;
+margin:0 auto 12px;
+display:block;
 object-fit:cover;
+background:#000;
+border:4px solid #ffa500;
+
+box-shadow:
+0 0 0 6px rgba(255,165,0,0.35),
+0 0 25px rgba(255,165,0,0.5),
+0 0 45px rgba(255,165,0,0.25);
 }
 
-/* MAIN TITLE */
+/* TITLE */
 
 h1{
-font-size:28px;
-margin:6px 0;
-font-weight:800;
-color:#ff8c00; /* ORANGE TITLE */
+font-family:'Playfair Display',serif;
+font-size:2rem;
+color:#ff7e00;
+margin-bottom:8px;
 }
 
-/* SUBTITLE */
+/* DETAILS */
 
-.subtitle{
-font-size:14px;
-color:var(--muted);
-margin-bottom:18px;
+.details{
+text-align:center;
+margin:12px 0;
+color:#ddd;
+font-size:0.95rem;
+list-style:none;
+line-height:1.5;
 }
+
+.details li{margin-bottom:6px;}
 
 /* JOIN BUTTON */
 
-.pill{
-display:block;
-width:100%;
-padding:20px 0; /* LITTLE BIGGER */
-margin:14px 0;
-border-radius:50px;
-background:linear-gradient(90deg,var(--teal1),var(--teal2));
-color:var(--btn-text);
-font-weight:900;
-font-size:19px;
-text-decoration:none;
-letter-spacing:1px;
+.btn{
 
-animation:blinkButton 1s infinite;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+
+background:#0088cc;
+color:#fff;
+
+padding:18px 40px;
+
+border-radius:60px;
+
+font-weight:700;
+text-decoration:none;
+
+font-size:1.25rem;
+
+margin:18px auto;
+
+box-shadow:0 0 20px rgba(0,136,204,0.8);
+
+animation:blinkBtn 1s infinite;
+
 }
 
-/* BLINK EFFECT */
+/* TELEGRAM ICON */
 
-@keyframes blinkButton{
+.btn img{
+width:24px;
+height:24px;
+}
+
+/* BLINK */
+
+@keyframes blinkBtn{
 
 0%{
 transform:scale(1);
-box-shadow:0 0 10px rgba(14,242,213,0.6);
+box-shadow:0 0 15px rgba(0,136,204,0.7);
 }
 
 50%{
 transform:scale(1.08);
-box-shadow:0 0 25px rgba(14,242,213,1);
+box-shadow:0 0 35px rgba(0,136,204,1);
 }
 
 100%{
 transform:scale(1);
-box-shadow:0 0 10px rgba(14,242,213,0.6);
+box-shadow:0 0 15px rgba(0,136,204,0.7);
 }
 
 }
 
-.pill-sub{
-font-size:12px;
-color:var(--muted);
-}
+/* BIG POINTS */
 
-.hurry{
-color:var(--teal1);
-font-weight:800;
-margin-top:6px;
+.big-points{
+margin:15px 0;
+color:#ffcc00;
+font-size:1.05rem;
+font-weight:600;
+line-height:1.5;
 }
 
 /* TIMER */
 
+.timer-box{
+background:#1e1e1e;
+border:2px solid #ff3b3b;
+padding:20px;
+border-radius:15px;
+margin-top:12px;
+color:#fff;
+box-shadow:0 0 20px rgba(255,0,0,0.3);
+}
+
+.timer-title{
+font-size:1.2rem;
+font-weight:700;
+margin-bottom:10px;
+color:#ff6b6b;
+}
+
 .timer{
-display:flex;
-justify-content:center;
-gap:15px;
-margin:16px 0 20px;
+font-size:2rem;
+font-weight:700;
+letter-spacing:3px;
+margin-bottom:8px;
 }
 
-.cell{
-background:rgba(1,40,38,0.6);
-padding:12px 16px;
+/* LIVE EARNINGS POPUP */
+
+.live-popup{
+
+position:fixed;
+
+top:-120px;
+left:50%;
+transform:translateX(-50%);
+
+background:#0f172a;
+
+padding:12px 22px;
+
 border-radius:10px;
-width:70px;
+
+color:#fff;
+
+font-size:14px;
+
+box-shadow:0 0 20px rgba(0,0,0,0.8);
+
+transition:top 0.5s;
+
+z-index:999;
+
 }
 
-.num{
-font-size:28px;
-font-weight:800;
+.footer{
+font-size:0.8rem;
+color:#888;
+margin-top:20px;
 }
 
-.lab{
-font-size:12px;
-color:var(--label-red);
-margin-top:4px;
-font-weight:700;
+.footer a{
+color:#ffa500;
+text-decoration:none;
 }
-
-/* FEATURES */
-
-.features{margin-bottom:18px;}
-
-.feature-item{
-margin:6px 0;
-font-weight:700;
-color:var(--muted);
-}
-
-.divider{
-height:1px;
-background:rgba(255,255,255,0.05);
-margin:20px auto;
-}
-
-.exp h2{font-size:20px;}
-
-.big{
-color:var(--teal1);
-font-weight:800;
-}
-
-.mini{
-font-size:12px;
-opacity:0.6;
-letter-spacing:2px;
-}
-
 
 </style>
-
-<script>
-let m=30,s=0;
-
-setInterval(()=>{
-document.getElementById("min").innerText=String(m).padStart(2,'0');
-document.getElementById("sec").innerText=String(s).padStart(2,'0');
-
-if(s===0){
-if(m===0)return;
-m--;
-s=59;
-}else{
-s--;
-}
-
-},1000);
-</script>
-
 </head>
 
 <body>
 
-<div class="center-wrap">
-<div class="wrap">
+<div class="main-card">
 
 <div class="marquee">
-<marquee scrollamount="4">
-🔥 FREE VIP SURESHOT • LIMITED TIME • JOIN FAST 🔥
-</marquee>
+<span>🔥 DAILY BIG & SMALL NUMBER PREDICTIONS – JOIN TELEGRAM NOW! 🔥</span>
 </div>
 
-<div class="profile-box">
-<img src="6138875427548761319.jpg">
-</div>
+<img src="6138875427548761319.jpg" class="profile-img">
 
-<h1>𝐁𝐇𝐓 𝐂𝐋𝐔𝐁 𝐒𝐔𝐑𝐄𝐒𝐇𝐎𝐓🤡ᴛ</h1>
+<h1>𝐁𝐇𝐓 𝐂𝐋𝐔𝐁 𝐒𝐔𝐑𝐄𝐒𝐇𝐎𝐓</h1>
 
-<div class="subtitle">
-JOIN FAST FOR FREE SURESHOT VIP HACKS
-</div>
+<ul class="details">
+<li>⚡ Fast & accurate predictions updated every few minutes</li>
+<li>🔐 Safe & trusted community with expert guidance</li>
+<li>🛡️ Highly reliable system used by thousands of players</li>
+</ul>
 
-<a class="pill" href="https://t.me/+_yXFaRmWelYwYWE1">
+<a href="https://t.me/+_yXFaRmWelYwYWE1" class="btn" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
 JOIN TELEGRAM NOW
 </a>
 
-<div class="pill-sub">
-FREE VIP HACKS
+<div class="big-points">
+⭐ Premium-level accuracy with powerful number study<br>
+⭐ Designed to help newcomers & pros achieve better outcomes
 </div>
 
-<div class="hurry">
-HURRY UP! JOIN NOW
+<div class="timer-box">
+<div class="timer-title">⏳ LIMITED TIME — JOIN NOW</div>
+<div class="timer" id="countdown">00:15:00</div>
 </div>
 
-<div class="timer">
-
-<div class="cell">
-<div class="num" id="min">30</div>
-<div class="lab">MIN</div>
-</div>
-
-<div class="cell">
-<div class="num" id="sec">00</div>
-<div class="lab">SEC</div>
+<div class="footer">
+Made by Rajendra Singh |
+<a href="https://rajendra9315.github.io/deepwebstudio/privacypolicy.html">Privacy Policy</a>
 </div>
 
 </div>
 
-<div class="features">
-<div class="feature-item">⭐ 100% WINNING SURESHOT</div>
-<div class="feature-item">⭐ 100% LOSS RECOVERY</div>
-<div class="feature-item">⭐ MONTHLY INCOME 30K–50K</div>
-</div>
+<div id="livePopup" class="live-popup"></div>
 
-<div class="divider"></div>
+<script>
 
-<div class="exp">
-<h2>5+ YEARS EXPERIENCE</h2>
-<div class="big">10 LAKH+ WINNING</div>
-<div class="mini">NUMBER KING</div>
-</div>
+/* TIMER */
 
-</div>
-</div>
+let time=15*60;
 
+const countdownEl=document.getElementById("countdown");
 
+function updateTimer(){
+
+let minutes=Math.floor(time/60);
+let seconds=time%60;
+
+countdownEl.innerHTML=
+"00:"+
+String(minutes).padStart(2,'0')+":"+
+String(seconds).padStart(2,'0');
+
+time--;
+if(time<0)time=0;
+
+}
+
+setInterval(updateTimer,1000);
+
+/* LIVE EARNINGS */
+
+const names=[
+"Rahul","Amit","Sahil","Rohan","Arjun",
+"Vikas","Pooja","Ankit","Neha","Deepak",
+"Manish","Ravi","Yash","Aditya","Karan"
+];
+
+const amounts=[
+"₹350","₹500","₹780","₹1200","₹950",
+"₹640","₹1500","₹420","₹890","₹2100"
+];
+
+function showPopup(){
+
+let name=names[Math.floor(Math.random()*names.length)];
+let amount=amounts[Math.floor(Math.random()*amounts.length)];
+
+let popup=document.getElementById("livePopup");
+
+popup.innerHTML="💰 "+name+" just earned "+amount;
+
+popup.style.top="40px";
+
+setTimeout(()=>{
+popup.style.top="-120px";
+},2500);
+
+}
+
+setInterval(showPopup,4000);
+
+</script>
 
 </body>
 </html>
