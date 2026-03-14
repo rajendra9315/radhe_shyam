@@ -1,0 +1,64 @@
+.title{
+color:#f7ff00;
+font-size:28px;
+font-weight:bold;
+}
+
+.profile-box{
+margin-top:25px;
+}
+
+.profile-img{
+width:250px;
+height:250px;
+border-radius:30px;
+border:6px solid white;
+box-shadow:0 0 30px rgba(255,255,255,0.6);
+object-fit:cover;
+}
+
+.stars{
+margin:20px 0;
+font-size:28px;
+color:gold;
+}
+
+.join-btn{
+display:inline-block;
+background:#ffbf00;
+color:black;
+padding:14px 40px;
+font-weight:bold;
+border-radius:10px;
+text-decoration:none;
+margin:15px 0;
+box-shadow:0 5px 10px rgba(0,0,0,0.4);
+transition:0.3s;
+}
+
+.join-btn:hover{
+transform:scale(1.05);
+}
+
+.text{
+margin-top:15px;
+line-height:1.6;
+font-size:17px;
+}
+
+.big-text{
+font-size:22px;
+font-weight:bold;
+margin-top:25px;
+}
+
+.small-text{
+margin-top:15px;
+font-size:18px;
+}
+
+.hurry{
+margin-top:30px;
+font-size:22px;
+font-weight:bold;
+}

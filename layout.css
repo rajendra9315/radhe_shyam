@@ -1,0 +1,13 @@
+body{
+margin:0;
+font-family: Arial, Helvetica, sans-serif;
+background: linear-gradient(#3c2f2f,#5a4747);
+color:white;
+text-align:center;
+}
+
+.container{
+max-width:420px;
+margin:auto;
+padding:20px;
+}

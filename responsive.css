@@ -1,0 +1,12 @@
+@media(max-width:480px){
+
+.title{
+font-size:24px;
+}
+
+.profile-img{
+width:200px;
+height:200px;
+}
+
+}
